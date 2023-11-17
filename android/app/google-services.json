@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "641676525528",
+    "project_id": "past-calculator",
+    "storage_bucket": "past-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641676525528:android:15fd1038e1122c533f7cad",
+        "android_client_info": {
+          "package_name": "com.calculator.past_calculator"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5tTkSQq_PX_6o_0Jl99wNQRJp7plESzE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
