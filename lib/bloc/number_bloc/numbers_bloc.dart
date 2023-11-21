@@ -35,14 +35,18 @@ class CalculatorBloc extends Bloc<CalculatorEvent, CalculatorState> {
           FirebaseFunctions.instance.httpsCallable('getHistoryData');
       final HttpsCallableResult result = await callable.call();
 
-      final List<HistoryModel> historiesList = (result.data as List<dynamic>)
-          .map((e) => HistoryModel.fromMap(e as Map<String, dynamic>))
-          .toList();
+      var objectList = result.data;
+
+      List<HistoryModel> historiesList = [];
+
+      objectList.forEach((item) {
+        historiesList.add(HistoryModel.fromMap(item));
+      });
       final lastHistory = historiesList.isNotEmpty ? historiesList.first : null;
 
       emit(CalculatorState(historiesList, lastHistory, false));
     } catch (e) {
-      debugPrint('$e');
+      debugPrint('Error $e');
     }
   }
 

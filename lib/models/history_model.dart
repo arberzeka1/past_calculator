@@ -9,11 +9,8 @@ class HistoryModel {
     this.sum,
   });
 
-  factory HistoryModel.fromMap(Map<String, dynamic> map) {
-    return HistoryModel(
-      firstNumber: map['firstNumber'] as int,
-      secondNumber: map['secondNumber'] as int,
-      sum: map['sum'] as int,
-    );
-  }
+  HistoryModel.fromMap(Map map)
+      : firstNumber = map['firstNumber'],
+        secondNumber = map['secondNumber'],
+        sum = map['sum'];
 }

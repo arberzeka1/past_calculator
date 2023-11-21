@@ -57,7 +57,8 @@ exports.getHistoryData = functions.https.onCall(async (data, context) => {
 
     const historiesList = [];
     querySnapshot.forEach((document) => {
-      historiesList.push(document.data());
+      const {firstNumber, secondNumber, sum} = document.data();
+      historiesList.push({firstNumber, secondNumber, sum});
     });
 
     return historiesList;
